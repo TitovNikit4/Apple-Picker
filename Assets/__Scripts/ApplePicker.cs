@@ -35,7 +35,8 @@ public class ApplePicker : MonoBehaviour {
 		Destroy(tBasketGO);
 
 		if (basketList.Count == 0) {
-			SceneManager.LoadScene("_Scene_0");
+			PlayerPrefs.SetInt("ScoreEarned", int.Parse(Basket.scoreGT.text));
+			SceneManager.LoadScene("_Scene_Game_Over");
 		}
 	}
 	

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Basket : MonoBehaviour {
 	[Header("Set Dynamically")]
-	public Text scoreGT;
+	public static Text scoreGT;
 
 	// Use this for initialization
 	void Start () {
@@ -29,7 +29,7 @@ public class Basket : MonoBehaviour {
 		if (collidedWith.tag == "Apple") {
 			Destroy(collidedWith);
 			int score = int.Parse(scoreGT.text);
-			score += 100;
+			score += 1000;
 			scoreGT.text = score.ToString();
 
 			if (score > HighScore.score) {
